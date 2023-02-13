@@ -22,4 +22,6 @@ params:
 
 # Default
 permalinks:
-  projects: /projects/:year-:slug/
+  statutes: /team/statutes/:slug/
+taxonomies:
+  status: statutes
