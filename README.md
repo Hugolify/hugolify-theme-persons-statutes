@@ -1,10 +1,10 @@
-# hugolify-themes-statutes
+# hugolify-themes-persons-statutes
 
 ## Install
-Edit `config/_default/module.yaml` to install the `hugolify-theme-statutes` module:
+Edit `config/_default/module.yaml` to install the `hugolify-theme-persons-statutes` module:
 ```yml
 imports:
-  - path: github.com/hugolify/hugolify-theme-statutes
+  - path: github.com/hugolify/hugolify-theme-persons-statutes
 ```
 
 ## Documentation
