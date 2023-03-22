@@ -1,3 +1,5 @@
-{{ range .GetTerms "statutes" }}
-  <p class="surtitle">{{ .Title }}</p>
+{{ with .GetTerms "statutes" }}
+  {{ range . }}
+    <p class="surtitle">{{ cond (isset .Params "title_singular") .Params.title_singular .Title }}</p>
+  {{ end }}
 {{ end }}
