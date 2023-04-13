@@ -1,3 +1,5 @@
 {{ range .GetTerms "statutes" }}
-  <p class="person-status" itemprop="jobTitle">{{ cond (isset .Params "title_singular") .Params.title_singular .Title }}</p>
+  {{ with .Title }}
+    <p class="person-status" itemprop="jobTitle">{{ partial "func/PrepareHTML" . }}</p>
+  {{ end }}
 {{ end }}
