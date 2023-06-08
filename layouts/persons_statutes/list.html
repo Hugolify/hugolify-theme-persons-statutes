@@ -1,0 +1,8 @@
+{{ define "hero"}}
+  {{- partial "persons_statutes/hero" . -}}
+{{ end }}
+
+{{ define "main" }}
+  {{ partial "persons_statutes/schema" . }}
+  {{ partial "persons_statutes/container" . }}
+{{ end }}
