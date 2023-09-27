@@ -1,0 +1,5 @@
+{{ range .GetTerms "persons_statutes" }}
+  {{ with .Title }}
+    <p class="surtitle">{{ partial "func/PrepareHTML" . }}</p>
+  {{ end }}
+{{ end }}
