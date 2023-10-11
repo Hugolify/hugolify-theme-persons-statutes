@@ -1,5 +1,5 @@
 {{ range .GetTerms "persons_statutes" }}
   {{ with .Title }}
-    <p class="person-status" itemprop="jobTitle">{{ partial "func/PrepareHTML" . }}</p>
+    <p class="surtitle" itemprop="jobTitle">{{ partial "func/PrepareHTML" . }}</p>
   {{ end }}
 {{ end }}
