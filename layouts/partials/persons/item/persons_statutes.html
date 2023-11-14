@@ -1,5 +1,7 @@
-{{ range .GetTerms "persons_statutes" }}
-  {{ with .Title }}
-    <p class="surtitle" itemprop="jobTitle">{{ partial "func/PrepareHTML" . }}</p>
-  {{ end }}
+{{- $titles := slice -}}
+{{- range .GetTerms "persons_statutes" -}}
+  {{- $titles = $titles | append (partial "func/PrepareHTML" .Title) -}}
+{{- end -}}
+{{ if gt (len $titles) 0 }}
+  <p class="surtitle" itemprop="jobTitle">{{ delimit $titles ", " }}</p>
 {{ end }}
