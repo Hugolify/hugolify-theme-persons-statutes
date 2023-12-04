@@ -1,8 +1,8 @@
-{{ $atf := true }}
-{{ if partial "func/HasImageHero" . }}
-  {{ $atf = false }}
-{{ end }}
-{{ $isPageStatutes := eq .Type "persons_statutes" }}
+{{- $atf := true }}
+{{- if partial "func/HasImageHero" . -}}
+  {{- $atf = false -}}
+{{- end -}}
+{{- $isPageStatutes := eq .Type "persons_statutes" -}}
 {{ range (.Paginate (.Data.Pages.GroupByParam "persons_statutes")).PageGroups }}
   <section>
     {{ if not $isPageStatutes }}
