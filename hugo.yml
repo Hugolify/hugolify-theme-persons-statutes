@@ -16,3 +16,8 @@ permalinks:
   persons_statutes: /team/statutes/:slug/
 taxonomies:
   persons_status: persons_statutes
+
+params:
+  admin:
+    collections:
+      persons_statutes: true
