@@ -14,9 +14,12 @@ module:
 # Default
 permalinks:
   persons_statutes: /team/statutes/:slug/
+  section:
+    persons_statutes: /team/statutes/
 taxonomies:
   persons_status: persons_statutes
 
+# Admin
 params:
   admin:
     collections:
