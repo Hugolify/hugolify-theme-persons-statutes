@@ -1,14 +1,14 @@
-{{- $atf := cond (partial "func/HasImageHero" .) false true -}}
+{{- $atf := cond (partial "func/HasImageHero.html" .) false true -}}
 {{- $isPageStatutes := eq .Type "persons_statutes" -}}
 {{- range (.Paginate (.Data.Pages.GroupByParam "persons_statutes")).PageGroups }}
   <section>
     {{- if not $isPageStatutes }}
       {{- with site.GetPage (printf "/persons_statutes/%s" (.Key | anchorize)) }}
-        <header class="heading" {{- partial "func/SetAnim" (dict "element" "heading") }}>
-          <h2>{{ partial "func/PrepareHTML" .Title | pluralize }}</h2>
+        <header class="heading" {{- partial "func/SetAnim.html" (dict "element" "heading") }}>
+          <h2>{{ partial "func/PrepareHTML.html" .Title | pluralize }}</h2>
         </header>
       {{ end -}}
     {{ end -}}
-    {{ partial "persons/items" (dict "pages" .Pages "abovethefold" $atf) }}
+    {{ partial "persons/items.html" (dict "pages" .Pages "abovethefold" $atf) }}
   </section>
 {{ end -}}

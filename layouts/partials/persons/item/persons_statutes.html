@@ -1,6 +1,6 @@
 {{- $titles := slice -}}
 {{- range .GetTerms "persons_statutes" -}}
-  {{- $titles = $titles | append (partial "func/PrepareHTML" .Title) -}}
+  {{- $titles = $titles | append (partial "func/PrepareHTML.html" .Title) -}}
 {{- end -}}
 {{ if gt (len $titles) 0 }}
   <p class="surtitle" itemprop="jobTitle">{{ delimit $titles ", " }}</p>
