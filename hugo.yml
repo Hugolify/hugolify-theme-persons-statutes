@@ -13,9 +13,10 @@ module:
 
 # Default
 permalinks:
-  persons_statutes: /team/statutes/:slug/
   section:
     persons_statutes: /team/statutes/
+  term:
+    persons_statutes: /team/statutes/:slug/
 taxonomies:
   persons_status: persons_statutes
 
@@ -25,3 +26,5 @@ params:
     collections:
       persons_statutes:
         enable: true
+        icon:
+          sveltiacms: info
