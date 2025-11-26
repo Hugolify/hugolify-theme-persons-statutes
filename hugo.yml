@@ -30,4 +30,9 @@ params:
           - field: isIndex
             value: false
         icon:
-          sveltiacms: info
+          bootstrap_icons: info-circle
+          iconoir: info-circle
+          material_icons: info
+          material_symbols: info
+          lucide: info
+          sveltiacms: info # legacy
