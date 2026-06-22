@@ -35,4 +35,3 @@ params:
           material_icons: info
           material_symbols: info
           lucide: info
-          sveltiacms: info # legacy
