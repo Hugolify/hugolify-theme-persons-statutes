@@ -1,0 +1,12 @@
+/* css/modules/persons-statutes.css — hugolify-theme-persons-statutes entry point */
+
+/* Tokens */
+@import '../tokens/persons-statutes.css';
+
+/* Components */
+@import '../components/persons-status.css';
+@import '../components/persons-statutes.css';
+
+/* Pages */
+@import '../pages/persons-status.css';
+@import '../pages/persons-statutes.css';
