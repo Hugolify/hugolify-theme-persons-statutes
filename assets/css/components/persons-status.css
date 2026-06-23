@@ -1,0 +1,11 @@
+/* components/persons-status.css */
+/*
+ * Usage: <article class="item persons_status">
+ */
+@layer components {
+  .persons_status {
+    .btn {
+      display: none;
+    }
+  }
+}
