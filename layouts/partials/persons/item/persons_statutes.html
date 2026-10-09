@@ -3,5 +3,5 @@
   {{- $titles = $titles | append (partial "func/PrepareHTML.html" .Title) -}}
 {{- end -}}
 {{ if gt (len $titles) 0 }}
-  <p class="surtitle" itemprop="jobTitle">{{ delimit $titles ", " }}</p>
+  <p class="surtitle">{{ delimit $titles ", " }}</p>
 {{ end }}
