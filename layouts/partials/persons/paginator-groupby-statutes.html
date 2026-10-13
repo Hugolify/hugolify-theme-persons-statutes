@@ -1,6 +1,6 @@
 {{- $atf := cond (partial "func/HasImageHero.html" .) false true -}}
 {{- $isPageStatutes := eq .Type "persons_statutes" -}}
-{{- range (.Paginate (.Data.Pages.GroupByParam "persons_statutes")).PageGroups }}
+{{- range (partial "func/GetPaginator.html" (dict "page" . "pages" (.Data.Pages.GroupByParam "persons_statutes"))).PageGroups }}
   <section>
     {{- if not $isPageStatutes }}
       {{- with site.GetPage (printf "/persons_statutes/%s" (.Key | anchorize)) }}
